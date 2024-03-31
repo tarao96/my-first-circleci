@@ -11,4 +11,10 @@ jobs:
       - image: circleci/node:erbium-bullseye-browsers-legacy
     steps:
       - checkout
+      - run:
+          name: Install dependency
+          command: npm install
+      - run:
+          name: Run Tests
+          command: npm run test
       - run: node --version
